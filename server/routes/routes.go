@@ -12,6 +12,8 @@ func ConfigRoutes(router *gin.Engine) *gin.Engine {
 		{
 			users.GET("/", controllers.ShowUsers)
 			users.POST("/", controllers.AddUser)
+			users.GET("/:name", controllers.ShowUser)
+			users.DELETE("/:email", controllers.DeleteUser)
 		}
 	}
 
